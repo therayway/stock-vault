@@ -23,6 +23,16 @@ def generate():
         out.write("<title>AI-Generated Stock Vault</title>\n")
         out.write(CSS + "</head><body>\n<h1>AI-Generated Stock Vault</h1>\n")
 
+        out.write("""
+        <p>
+          <a href="https://gumroad.com/l/urbanpack" target="_blank"
+          style="display:inline-block; padding:0.6rem 1.2rem; background:#ff6f61; color:#fff;
+          text-decoration:none; font-weight:bold; border-radius:6px;">
+            📦 Buy the Unwatermarked HD Pack
+          </a>
+        </p>
+""")
+
         if files:
             out.write("<div class='grid'>\n")
             for fn in files:
