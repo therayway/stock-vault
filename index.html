@@ -1,21 +1,34 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title>AI Image Gallery</title>
+# docs/gallery_generator.py
+import os
+from urllib.parse import quote_plus
 
+IMAGE_DIR = "docs/images"
+OUTPUT_FILE = "docs/index.html"
+AFFILIATE_TEMPLATE = "https://example.com/product?ref=ai&img={}"
+
+CSS = """
 <style>
-  body { font-family: sans-serif; margin: 0; padding: 1rem; }
+  body { font-family: sans-serif; margin: 1rem; background: #fff; color: #111; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
-  .grid a { display: block; }
-  .grid img { width: 100%; height: auto; display: block; border-radius: 4px; }
+  .grid img { width: 100%; height: auto; border-radius: 8px; }
 </style>
+"""
 
-</head>
-<body>
-  <h1>AI-Generated Stock Vault</h1>
-  <div class='grid'>
-  </div>
-</body>
-</html>
+def generate():
+    files = sorted(f for f in os.listdir(IMAGE_DIR)
+                   if f.lower().endswith(('.jpg', '.png', '.jpeg', '.gif')))
+    with open(OUTPUT_FILE, 'w') as out:
+        out.write("<!DOCTYPE html><html><head>\n")
+        out.write("<meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'>\n")
+        out.write("<title>AI-Generated Stock Vault</title>\n")
+        out.write(CSS + "</head><body>\n<h1>AI-Generated Stock Vault</h1>\n<div class='grid'>\n")
+        for fn in files:
+            alt = os.path.splitext(fn)[0].replace("-", " ").replace("_", " ")
+            link = AFFILIATE_TEMPLATE.format(quote_plus(fn))
+            out.write(f"<a href='{link}' target='_blank'><img src='images/{fn}' alt='{alt}' loading='lazy'></a>\n")
+        out.write("</div></body></html>")
+
+if __name__ == "__main__":
+    os.makedirs(IMAGE_DIR, exist_ok=True)
+    generate()
+
