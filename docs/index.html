@@ -3,20 +3,42 @@
 <title>AI-Generated Stock Vault</title>
 
 <style>
-  body { font-family: sans-serif; margin: 1rem; background: #fff; color: #111; }
+  body { font-family: monospace; background: #111; color: #eee; margin: 2rem; }
+  h1 { color: #0ff; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
-  .grid img { width: 100%; height: auto; border-radius: 8px; }
-  .placeholder { font-style: italic; color: #666; margin-top: 2rem; }
+  .grid img { width: 100%; border-radius: 6px; box-shadow: 0 0 8px rgba(0,0,0,0.4); }
+  .placeholder {
+    font-style: italic;
+    color: #888;
+    font-size: 1.1rem;
+    border: 1px dashed #444;
+    padding: 1.5rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    line-height: 1.6;
+  }
 </style>
+
 </head><body>
 <h1>AI-Generated Stock Vault</h1>
 
+        out.write("""
         <p>
           <a href="https://gumroad.com/l/urbanpack" target="_blank"
           style="display:inline-block; padding:0.6rem 1.2rem; background:#ff6f61; color:#fff;
           text-decoration:none; font-weight:bold; border-radius:6px;">
             📦 Buy the Unwatermarked HD Pack
           </a>
+
+          <a href="https://therayway.substack.com" target="_blank"
+          style="display:inline-block; padding:0.6rem 1.2rem; background:#333; color:#fff;
+          text-decoration:none; font-weight:bold; border-radius:6px;">
+            ✉️ Get Premium Drops via Substack
+          </a>
         </p>
+        """)
 <p class='placeholder'>Gallery is under construction. Check back soon for curated AI-generated visuals.</p>
 </body></html>
