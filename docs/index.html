@@ -1,12 +1,16 @@
 <!DOCTYPE html><html><head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>AI-Generated Stock Vault</title>
-
 <style>
-  body { font-family: monospace; background: #111; color: #eee; margin: 2rem; }
-  h1 { color: #0ff; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1rem; }
-  .grid img { width: 100%; border-radius: 6px; box-shadow: 0 0 8px rgba(0,0,0,0.4); }
+  body {
+    font-family: sans-serif;
+    background: #111;
+    color: #eee;
+    margin: 2rem;
+  }
+  h1 {
+    color: #0ff;
+  }
   .placeholder {
     font-style: italic;
     color: #888;
@@ -20,26 +24,36 @@
     text-align: center;
     line-height: 1.6;
   }
+  .buttons a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-right: 1rem;
+  }
+  .gumroad {
+    background: #ff6f61;
+    color: #fff;
+  }
+   .substack {
+     background: #333;
+     color: #fff;
+  }
 </style>
+</head>
+<body>
+  <h1>AI-Generated Stock Vault</h1>
 
-</head><body>
-<h1>AI-Generated Stock Vault</h1>
+  <div class="buttons">
+    <a href="https://gumroad.com/l/urbanpack" target="_blank"
+      📦 Buy the Unwatermarked HD Pack
+    </a>
+    <a href="https://therayway.substack.com" target="_blank"
+      ✉️ Get Premium Drops via Substack
+    </a>
+  <div>
 
-        out.write("""
-        <p>
-          <a href="https://gumroad.com/l/urbanpack" target="_blank"
-          style="display:inline-block; padding:0.6rem 1.2rem; background:#ff6f61; color:#fff;
-          text-decoration:none; font-weight:bold; border-radius:6px;">
-            📦 Buy the Unwatermarked HD Pack
-          </a>
-
-          <a href="https://therayway.substack.com" target="_blank"
-          style="display:inline-block; padding:0.6rem 1.2rem; background:#333; color:#fff;
-          text-decoration:none; font-weight:bold; border-radius:6px;">
-            ✉️ Get Premium Drops via Substack
-          </a>
-        </p>
-        """)
-
-<p class='placeholder'>Gallery is under construction. Check back soon for curated AI-generated visuals.</p>
-</body></html>
+  </p class="placeholder">Gallery is under construction. Check back soon for curated AI-generated visuals.</p>
+</body>
+</html>
