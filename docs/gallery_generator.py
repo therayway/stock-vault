@@ -108,7 +108,7 @@ def generate():
 
         out.write("""
         <div class="buttons">
-          <a href="https://gumroad.com/l/urbanpack" target="_blank">📦 Buy the Unwatermarked HD Pack</a>
+          <a href="https://gumroad.com/l/agcjs" target="_blank">📦 Buy the Unwatermarked HD Pack</a>
           <a href="https://therayway.substack.com" target="_blank">✉️ Get Premium Drops via Substack</a>
         </div>
         """)
